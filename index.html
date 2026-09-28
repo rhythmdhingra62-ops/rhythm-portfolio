@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rhythm Dhingra | Creative Digital Freelancer</title>
+  <meta name="description" content="Rhythm Dhingra — Creative Digital Freelancer offering Canva design, presentations, video editing, content and AI-assisted digital services.">
+  <style>
+    :root{
+      --bg:#faf8f5; --card:#ffffff; --text:#1d1d1f; --muted:#6f6a67;
+      --accent:#7c5cff; --accent2:#e9e1ff; --line:#e8e3df;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1100px,92%);margin:auto}
+    nav{position:sticky;top:0;z-index:10;background:rgba(250,248,245,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:22px;font-weight:800;letter-spacing:-.5px}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:26px;font-size:14px;font-weight:600}
+    .nav-links a:hover{color:var(--accent)}
+    .hero{padding:95px 0 80px;display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
+    .eyebrow{display:inline-block;padding:8px 13px;background:var(--accent2);color:#5d43c7;border-radius:30px;font-size:13px;font-weight:700;margin-bottom:20px}
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.03;letter-spacing:-3px;margin-bottom:22px}
+    h1 span{color:var(--accent)}
+    .hero p{font-size:18px;color:var(--muted);max-width:620px;margin-bottom:30px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:13px 20px;border-radius:12px;font-weight:700;border:1px solid var(--text);transition:.2s}
+    .btn.primary{background:var(--text);color:#fff}
+    .btn.primary:hover{transform:translateY(-2px);background:#000}
+    .btn.secondary{border-color:var(--line);background:#fff}
+    .btn.secondary:hover{border-color:var(--accent);color:var(--accent)}
+    .hero-card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 20px 50px rgba(40,30,20,.08)}
+    .profile-circle{width:210px;height:210px;margin:5px auto 25px;border-radius:50%;background:linear-gradient(145deg,#efe8ff,#f7eee8);display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:800;color:var(--accent);border:8px solid #fff;box-shadow:0 12px 35px rgba(60,40,100,.12)}
+    .hero-card h3{text-align:center;font-size:22px}
+    .hero-card p{text-align:center;color:var(--muted);font-size:14px;margin-top:6px}
+    section{padding:78px 0}
+    .section-title{font-size:38px;letter-spacing:-1.5px;margin-bottom:10px}
+    .section-subtitle{color:var(--muted);margin-bottom:35px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{background:#fff;border:1px solid var(--line);padding:25px;border-radius:18px;transition:.2s}
+    .service:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(40,30,20,.07)}
+    .icon{font-size:28px;margin-bottom:12px}
+    .service h3{font-size:18px;margin-bottom:7px}
+    .service p{font-size:14px;color:var(--muted)}
+    .portfolio{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .project{min-height:230px;border-radius:20px;padding:28px;display:flex;flex-direction:column;justify-content:flex-end;border:1px solid var(--line);background:linear-gradient(135deg,#fff,#f0ebff)}
+    .project:nth-child(2){background:linear-gradient(135deg,#fff,#eaf5f4)}
+    .project:nth-child(3){background:linear-gradient(135deg,#fff,#fff0e5)}
+    .project:nth-child(4){background:linear-gradient(135deg,#fff,#f1f1f1)}
+    .project .tag{font-size:12px;font-weight:700;color:var(--accent);margin-bottom:7px}
+    .project h3{font-size:23px;margin-bottom:5px}
+    .project p{color:var(--muted);font-size:14px}
+    .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}
+    .about-box{background:#1d1d1f;color:#fff;padding:38px;border-radius:24px}
+    .about-box .big{font-size:42px;font-weight:800;line-height:1.05}
+    .about-text p{color:var(--muted);margin-bottom:15px}
+    .skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+    .skill{padding:8px 12px;background:#fff;border:1px solid var(--line);border-radius:30px;font-size:13px;font-weight:600}
+    .contact{background:#1d1d1f;color:#fff;border-radius:28px;padding:55px;text-align:center}
+    .contact p{color:#c8c8c8;max-width:600px;margin:10px auto 25px}
+    .contact .btn.primary{background:#fff;color:#1d1d1f;border-color:#fff}
+    footer{padding:28px 0;color:var(--muted);font-size:13px;text-align:center}
+    @media(max-width:800px){
+      .hero,.about{grid-template-columns:1fr}
+      .services{grid-template-columns:1fr 1fr}
+      .hero{padding-top:65px}
+      .nav-links{gap:12px}
+    }
+    @media(max-width:520px){
+      .nav-links{display:none}
+      .services,.portfolio{grid-template-columns:1fr}
+      h1{letter-spacing:-2px}
+      .contact{padding:35px 22px}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="#home">Rhythm<span>.</span></a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main id="home">
+  <section class="container hero">
+    <div>
+      <div class="eyebrow">CREATIVE DIGITAL FREELANCER</div>
+      <h1>Ideas into <span>professional</span> digital work.</h1>
+      <p>I create clean, engaging designs, presentations, content and digital experiences for individuals, creators and small businesses.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#portfolio">View My Work</a>
+        <a class="btn secondary" href="#contact">Let's Work Together</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="profile-circle">R</div>
+      <h3>Rhythm Dhingra</h3>
+      <p>Canva • Presentations • Video Editing • Content • AI Services</p>
+    </div>
+  </section>
+
+  <section id="services" class="container">
+    <h2 class="section-title">What I can do</h2>
+    <p class="section-subtitle">Flexible digital services tailored to your project.</p>
+    <div class="services">
+      <div class="service"><div class="icon">🎨</div><h3>Canva Design</h3><p>Social posts, flyers, posters, presentations and other polished visual content.</p></div>
+      <div class="service"><div class="icon">📊</div><h3>PowerPoint</h3><p>Clean, organized and engaging presentations for academic or professional use.</p></div>
+      <div class="service"><div class="icon">🎬</div><h3>Video Editing</h3><p>Short-form videos, reels and simple promotional edits with a clean visual style.</p></div>
+      <div class="service"><div class="icon">✍️</div><h3>Content Writing</h3><p>Clear articles, captions, descriptions and other written digital content.</p></div>
+      <div class="service"><div class="icon">📋</div><h3>Data Entry</h3><p>Accurate spreadsheet work, formatting, document conversion and web research.</p></div>
+      <div class="service"><div class="icon">🤖</div><h3>AI-Assisted Services</h3><p>AI-assisted research, content workflows, organization and creative productivity.</p></div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="container">
+    <h2 class="section-title">Selected work</h2>
+    <p class="section-subtitle">Sample projects and concepts. Replace these with your real work as your portfolio grows.</p>
+    <div class="portfolio">
+      <div class="project"><div class="tag">CANVA DESIGN</div><h3>Social Media Campaign</h3><p>A clean visual concept for a fictional lifestyle brand.</p></div>
+      <div class="project"><div class="tag">PRESENTATION DESIGN</div><h3>AI in Healthcare</h3><p>A modern 10-slide presentation concept with structured information.</p></div>
+      <div class="project"><div class="tag">VIDEO EDITING</div><h3>Short Form Reel</h3><p>A 30-second promotional video concept designed for social media.</p></div>
+      <div class="project"><div class="tag">BRAND DESIGN</div><h3>Minimal Brand Identity</h3><p>A fictional brand concept including logo and visual direction.</p></div>
+    </div>
+  </section>
+
+  <section id="about" class="container">
+    <div class="about">
+      <div class="about-box"><div class="big">Creative.<br>Detail-oriented.<br>Reliable.</div></div>
+      <div class="about-text">
+        <h2 class="section-title">About me</h2>
+        <p>I’m a creative and detail-oriented digital freelancer who enjoys turning ideas into clean, professional and engaging digital content.</p>
+        <p>I focus on understanding requirements, paying attention to detail and delivering organized work on time. I’m also building my freelance portfolio with a focus on quality, clear communication and long-term client relationships.</p>
+        <div class="skills">
+          <span class="skill">Canva</span><span class="skill">PowerPoint</span><span class="skill">Video Editing</span>
+          <span class="skill">Content Writing</span><span class="skill">Data Entry</span><span class="skill">AI Tools</span><span class="skill">Logo Design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <div class="contact">
+      <h2 class="section-title">Have a project in mind?</h2>
+      <p>Tell me what you need and I’ll be happy to discuss how I can help.</p>
+      <!-- Replace the # below with your Fiverr profile URL -->
+      <a class="btn primary" href="#" onclick="alert('Replace this # with your Fiverr profile link in the HTML code.'); return false;">Contact Me on Fiverr</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2026 Rhythm Dhingra. All rights reserved.
+</footer>
+
+</body>
+</html>
